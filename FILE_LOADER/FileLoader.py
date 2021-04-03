@@ -1,12 +1,12 @@
 from tqdm import tqdm, trange
 from time import sleep
 
-with open('test.txt', 'r') as read_f:
+with open(r'C:\Users\bilakos\Desktop\PYTHON_PROJECTS\test.txt', 'r') as read_f:
     l = read_f.readlines() #Reading all the lines of the file instantly and importing them to a LIST
     with tqdm(total=len(l)) as tl:
         for a in l:
             a = a.rstrip('\n')
-            with open('test1.txt', 'a') as test_f:
+            with open(r'C:\Users\bilakos\Desktop\PYTHON_PROJECTS\test1.txt', 'a') as test_f:
                 test_f.write(a + '\n')
             tl.set_description(f'Saving {a}') #or tl.set_description('Saving %s'% a) --> It's the same
             if len(l) >= 100:
